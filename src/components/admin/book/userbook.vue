@@ -148,7 +148,7 @@
     },
     methods: {
       deleteBook (id) {
-        this.$confirm('此操作将永久删除该书籍, 是否继续?', '提示', {
+        this.$confirm('此操作将永久删除该书籍, 是否继续删除?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'

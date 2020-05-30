@@ -4,7 +4,7 @@
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/admin/dashboard' }">管理中心</el-breadcrumb-item>
         <el-breadcrumb-item>发稿管理</el-breadcrumb-item>
-        <el-breadcrumb-item>发稿审核</el-breadcrumb-item>
+        <el-breadcrumb-item>所有稿件</el-breadcrumb-item>
       </el-breadcrumb>
     </el-row>
     <edit-form @onSubmit="loadBooks()" ref="edit"></edit-form>
@@ -54,12 +54,12 @@
           :formatter="staFormatter"
           fit>
           <template slot-scope="scope">
-          <div slot="reference" class="name-wrapper">
-            <el-tag
-              effect="dark"
-              :type="scope.row.status === '2' ? 'danger' : ''"
-              disable-transitions>{{staFormatter(scope.row)}}</el-tag>
-          </div>
+            <div slot="reference" class="name-wrapper">
+              <el-tag
+                effect="dark"
+                :type="scope.row.status === '2' ? 'danger' : ''"
+                disable-transitions>{{staFormatter(scope.row)}}</el-tag>
+            </div>
           </template>
         </el-table-column>
 
@@ -108,7 +108,7 @@
 <script>
   import EditForm from './ShEditForm'
   export default {
-    name: 'edrbook',
+    name: 'edralllist',
     components: {EditForm},
     data () {
       return {

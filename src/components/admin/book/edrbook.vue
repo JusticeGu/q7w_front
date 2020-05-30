@@ -165,6 +165,7 @@
             name: item.category.name
           }
         };
+        item.status="3"
         this.$axios
           .put('admin/content/vering', {id: item.id}).then(resp => {
           if (resp && resp.data.rspCode === '200') {

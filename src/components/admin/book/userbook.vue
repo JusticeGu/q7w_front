@@ -50,14 +50,14 @@
         </el-table-column>
         <el-table-column
           prop="status"
-          label="目前状态"
+          label="进度"
           :formatter="staFormatter"
           fit>
         </el-table-column>
 
         <el-table-column
           prop="isrejec"
-          label="退回"
+          label="状态"
           :formatter="isreFormatter"
           fit>
           <template slot-scope="scope">
@@ -148,7 +148,7 @@
     },
     methods: {
       deleteBook (id) {
-        this.$confirm('此操作将永久删除该书籍, 是否继续删除?', '提示', {
+        this.$confirm('此操作将永久删除该书籍, 是否继续?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'

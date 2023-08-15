@@ -18,4 +18,9 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
 timeout: 60
-notification: {}
+notification:
+  recipients:
+  - recipient: "1"
+    notifier: c-96h8h:n-ng2lv
+  condition:
+  - Success

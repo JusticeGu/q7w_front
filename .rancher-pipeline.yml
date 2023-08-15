@@ -24,3 +24,5 @@ notification:
     notifier: c-96h8h:n-ng2lv
   condition:
   - Success
+  - Changed
+  - Failed
